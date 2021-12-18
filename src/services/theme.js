@@ -29,5 +29,5 @@ export const secbuttextColor = theme('mode', {
   
 export const secButtColor = theme('mode', {
     light: '#FFFFFF',
-    dark: '#000000',
+    dark: '#333436',
 });
