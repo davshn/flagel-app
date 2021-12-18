@@ -1,15 +1,16 @@
 import styled from 'styled-components/native';
 import { backgroundColor } from '../services/theme';
+import ButtonGen from '../generic/ButtonGen';
 
-const StyledView = styled.View`
+const ViewStyled = styled.View`
   background-color:${backgroundColor};
-`
-const StyledText = styled.Text`
-  color: black;
+  height:100%;
+  padding:20%;
 `
 export default function Login() {
   return (
-    <StyledView>
-    </StyledView>
+    <ViewStyled>
+      <ButtonGen title="Acceder"/>
+    </ViewStyled>
   );
 }
