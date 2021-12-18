@@ -1,15 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-//<StatusBar style="dark" />
-
-import React from 'react';
-import {} from 'react-native';
-
+import { NavigationContainer } from '@react-navigation/native';
+import {ThemeProvider} from 'styled-components/native';
+import Login from './src/views/Login';
 
 export default function App() {
-
   return (
     <>
-
+      <NavigationContainer>
+        <ThemeProvider theme={{ mode: (true)?'dark':'light' }}>
+          <Login />
+        </ThemeProvider>
+      </NavigationContainer>
     </>
   );
 }
