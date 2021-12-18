@@ -20,4 +20,14 @@ export const buttonColor = theme('mode', {
 export const buttonShadowColor = theme('mode', {
     light: 'rgba(0, 0, 0, 0.25)',
     dark: 'rgba(242, 227, 187, 0.25)',
-  });
+});
+  
+export const secbuttextColor = theme('mode', {
+    light: '#ff480e',
+    dark: '#f8d27d',
+});
+  
+export const secButtColor = theme('mode', {
+    light: '#FFFFFF',
+    dark: '#000000',
+});

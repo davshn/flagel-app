@@ -1,6 +1,7 @@
 import styled from 'styled-components/native';
 import { backgroundColor } from '../services/theme';
 import ButtonGen from '../generic/ButtonGen';
+import SecButtonGen from '../generic/SecButtonGen';
 
 const ViewStyled = styled.View`
   background-color:${backgroundColor};
@@ -10,7 +11,8 @@ const ViewStyled = styled.View`
 export default function Login() {
   return (
     <ViewStyled>
-      <ButtonGen title="Acceder"/>
+      <ButtonGen title="Acceder" />
+      <SecButtonGen title="Registrate"/>
     </ViewStyled>
   );
 }

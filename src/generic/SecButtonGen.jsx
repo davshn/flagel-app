@@ -1,8 +1,8 @@
 import styled from 'styled-components/native';
-import { buttonColor,buttontextColor } from '../services/theme';
+import { secButtColor,secbuttextColor } from '../services/theme';
 
 const ButtonStyled = styled.TouchableOpacity`
-  background-color:${buttonColor};
+  background-color:${secButtColor};
   width: 84px;
   height: 34px;
   border-radius: 9px;
@@ -12,11 +12,11 @@ const TextStyled = styled.Text`
   font-weight: bold;
   font-size: 14px;
   text-align: center;
-  color: ${buttontextColor};
-  padding:10%;
+  color: ${secbuttextColor};
+  padding:8%;
 `;
 
-export default function ButtonGen({ title }) {
+export default function SecButtonGen({ title }) {
   return (
       <ButtonStyled>
           <TextStyled>{title}</TextStyled>
