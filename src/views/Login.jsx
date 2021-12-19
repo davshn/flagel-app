@@ -1,22 +1,11 @@
 import styled from 'styled-components/native';
-import { backgroundColor,titleColor,textColor } from '../services/theme';
+import { titleColor,textColor } from '../services/theme';
 import ButtonGen from '../generic/ButtonGen';
 import SecButtonGen from '../generic/SecButtonGen';
 import { useState } from 'react';
 import { AntDesign } from '@expo/vector-icons';
-
-const ViewStyled = styled.View`
-  background-color:${backgroundColor};
-  height:100%;
-  padding:20%;
-  align-items:center;
-`;
-
-const TextStyled = styled.Text`
-  font-size: 14px;
-  text-align: center;
-  margin:5%;
-`;
+import TextStyled from '../generic/TextGen';
+import ViewStyled from '../generic/ViewGen';
 
 const TitleStyled = styled.Text`
   padding:20% 0;
@@ -46,9 +35,10 @@ const SectionStyled = styled.View`
   align-items:center;
 `
 
-export default function Login() {
+export default function Login({navigation}) {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
+
   return (
     <ViewStyled>
       <TitleStyled>Flagelante Feliz Club</TitleStyled>
@@ -61,12 +51,12 @@ export default function Login() {
         <InputStyled value={password} onChangeText={setPassword} placeholder="Contraseña" placeholderTextColor='gray' secureTextEntry/>
       </FormStyled>
       <SectionStyled>
-        <ButtonGen title="Acceder" />
-        <TextStyled style={{color: "red"}}>Olvidaste tu contraseña</TextStyled>
+        <ButtonGen title="Acceder" onPress={() => navigation.navigate('Home')} />
+        <TextStyled style={{ color: "red" }} onPress={() => navigation.navigate('ForgotPassword')}>Olvidaste tu contraseña</TextStyled>
       </SectionStyled>
       <SectionStyled>
         <TextStyled style={{ color: "#999999" }}>¿No tienes una cuenta?</TextStyled>
-        <SecButtonGen title="Registrate" />
+        <SecButtonGen title="Registrate" onPress={() => navigation.navigate('CreateAccount') }/>
       </SectionStyled>
       <SectionStyled>
         <TextStyled style={{ color: "red" }}>Acerca de</TextStyled>

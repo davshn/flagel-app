@@ -17,9 +17,9 @@ const TextStyled = styled.Text`
   padding:8%;
 `;
 
-export default function SecButtonGen({ title }) {
+export default function SecButtonGen({ title,onPress }) {
   return (
-      <ButtonStyled>
+    <ButtonStyled onPress={onPress}>
           <TextStyled>{title}</TextStyled>
       </ButtonStyled>
   );
