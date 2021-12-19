@@ -28,6 +28,16 @@ export const secbuttextColor = theme('mode', {
 });
   
 export const secButtColor = theme('mode', {
-    light: '#FFFFFF',
+    light: '#ffffff',
     dark: '#333436',
+});
+
+export const titleColor = theme('mode', {
+    light: '#630c02',
+    dark: '#c33004',
+});
+
+export const textColor = theme('mode', {
+    light: 'black',
+    dark: 'white',
 });

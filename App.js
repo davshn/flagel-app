@@ -6,7 +6,7 @@ export default function App() {
   return (
     <>
       <NavigationContainer>
-        <ThemeProvider theme={{ mode: (true)?'dark':'light' }}>
+        <ThemeProvider theme={{ mode: (false)?'dark':'light' }}>
           <Login />
         </ThemeProvider>
       </NavigationContainer>

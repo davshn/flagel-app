@@ -7,6 +7,7 @@ const ButtonStyled = styled.TouchableOpacity`
   height: 34px;
   border-radius: 9px;
   elevation: 2;
+  margin:5%;
 `;
 const TextStyled = styled.Text`
   font-weight: bold;
