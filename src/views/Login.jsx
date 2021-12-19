@@ -68,6 +68,9 @@ export default function Login() {
         <TextStyled style={{ color: "#999999" }}>¿No tienes una cuenta?</TextStyled>
         <SecButtonGen title="Registrate" />
       </SectionStyled>
+      <SectionStyled>
+        <TextStyled style={{ color: "red" }}>Acerca de</TextStyled>
+      </SectionStyled>
     </ViewStyled>
   );
 }
