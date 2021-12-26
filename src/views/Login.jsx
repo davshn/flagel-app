@@ -6,11 +6,10 @@ import { useState } from 'react';
 import { AntDesign } from '@expo/vector-icons';
 import TextStyled from '../generic/TextGen';
 import ViewStyled from '../generic/ViewGen';
-import { useFonts } from '@use-expo/font';
-import AppLoading from 'expo-app-loading';
+import DarkModeButton from '../generic/DarkModeButton';
 
 const TitleStyled = styled.Text`
-  padding:20% 0;
+  padding:15% 0 0 0;
   font-size: 40px;
   font-weight: bold;
   text-align: center;
@@ -40,16 +39,11 @@ const SectionStyled = styled.View`
 export default function Login({navigation}) {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
-  const loading = useFonts({ 'Deutch': require('../../assets/fonts/Deutsche.ttf') })
-  
-    if (!loading) {
-    return <AppLoading />;
-  }
-    
   
   return (
     <ViewStyled>
-      <TitleStyled style={{ fontFamily: 'Deutch'}}>Flagelante Feliz Club</TitleStyled>
+      <TitleStyled style={{ fontFamily: 'Deutch' }}>Flagelante Feliz Club</TitleStyled>
+      <DarkModeButton/>
       <FormStyled>
         <AntDesign name="user" size={24} color="gray"/>
         <InputStyled value={user} onChangeText={setUser} placeholder="Usuario" placeholderTextColor='gray' />
