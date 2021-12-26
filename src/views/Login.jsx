@@ -6,6 +6,8 @@ import { useState } from 'react';
 import { AntDesign } from '@expo/vector-icons';
 import TextStyled from '../generic/TextGen';
 import ViewStyled from '../generic/ViewGen';
+import { useFonts } from '@use-expo/font';
+import AppLoading from 'expo-app-loading';
 
 const TitleStyled = styled.Text`
   padding:20% 0;
@@ -38,10 +40,16 @@ const SectionStyled = styled.View`
 export default function Login({navigation}) {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
-
+  const loading = useFonts({ 'Deutch': require('../../assets/fonts/Deutsche.ttf') })
+  
+    if (!loading) {
+    return <AppLoading />;
+  }
+    
+  
   return (
     <ViewStyled>
-      <TitleStyled>Flagelante Feliz Club</TitleStyled>
+      <TitleStyled style={{ fontFamily: 'Deutch'}}>Flagelante Feliz Club</TitleStyled>
       <FormStyled>
         <AntDesign name="user" size={24} color="gray"/>
         <InputStyled value={user} onChangeText={setUser} placeholder="Usuario" placeholderTextColor='gray' />
@@ -57,9 +65,6 @@ export default function Login({navigation}) {
       <SectionStyled>
         <TextStyled style={{ color: "#999999" }}>¿No tienes una cuenta?</TextStyled>
         <SecButtonGen title="Registrate" onPress={() => navigation.navigate('CreateAccount') }/>
-      </SectionStyled>
-      <SectionStyled>
-        <TextStyled style={{ color: "red" }}>Acerca de</TextStyled>
       </SectionStyled>
     </ViewStyled>
   );
