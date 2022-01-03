@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 import ViewStyled from '../generic/ViewGen';
 import { gql, useQuery } from '@apollo/client'
 import AppLoading from 'expo-app-loading';
-import Thread from '../components/Thread';
+import Thread from '../components/ThreadCard';
 
 const ALL_THREADS = gql`
 {allThreads {
