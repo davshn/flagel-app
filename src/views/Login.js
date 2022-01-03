@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { AntDesign } from '@expo/vector-icons';
 import TextStyled from '../generic/TextGen';
 import ViewStyled from '../generic/ViewGen';
-import DarkModeButton from '../generic/DarkModeButton';
+import DarkModeButton from '../components/DarkModeButton';
 
 const TitleStyled = styled.Text`
   padding:15% 0 0 0;

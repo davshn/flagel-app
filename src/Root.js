@@ -1,10 +1,10 @@
 import { ThemeProvider } from 'styled-components/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
-import Login from './src/views/Login.jsx';
-import CreateAcount from './src/views/CreateAcount.jsx';
-import ForgotPass from './src/views/ForgotPass.jsx';
-import Home from './src/views/Home.jsx';
+import Login from './views/Login';
+import CreateAcount from './views/CreateAcount';
+import ForgotPass from './views/ForgotPass';
+import Home from './views/Home';
 import { useSelector } from 'react-redux';
 
 const Stack = createNativeStackNavigator();

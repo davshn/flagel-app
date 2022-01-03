@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components/native';
 import ViewStyled from '../generic/ViewGen';
 import TextStyled from '../generic/TextGen';
 
