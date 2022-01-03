@@ -5,6 +5,7 @@ import Login from './views/Login';
 import CreateAcount from './views/CreateAcount';
 import ForgotPass from './views/ForgotPass';
 import Home from './views/Home';
+import ThreadDetails from './views/ThreadDetails';
 import { useSelector } from 'react-redux';
 
 const Stack = createNativeStackNavigator();
@@ -19,7 +20,8 @@ export default function Root() {
                         <Stack.Screen name="Login" component={Login} />
                         <Stack.Screen name="CreateAccount" component={CreateAcount} />
                         <Stack.Screen name="ForgotPassword" component={ForgotPass} />
-                        <Stack.Screen name="Home" component={Home}/> 
+                        <Stack.Screen name="Home" component={Home} />
+                        <Stack.Screen name="ThreadDetails" component={ThreadDetails}/>                         
                     </Stack.Navigator>
                 </ThemeProvider>
             </NavigationContainer>

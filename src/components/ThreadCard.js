@@ -1,9 +1,12 @@
 import { View, Text } from 'react-native';
+import { useContext} from 'react';
+import { NavigationContext } from '@react-navigation/core';
 
-export default function Thread({ title }) {
+export default function Thread({ title,id }) {
+    const navigation = useContext(NavigationContext);
     return (
         <View >
-            <Text>{title}</Text>
+            <Text onPress={() => navigation.navigate('ThreadDetails',{id:id})}>{title}</Text>
         </View>
     )
 }

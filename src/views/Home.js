@@ -4,12 +4,7 @@ import { gql, useQuery } from '@apollo/client'
 import AppLoading from 'expo-app-loading';
 import Thread from '../components/ThreadCard';
 
-const ALL_THREADS = gql`
-{allThreads {
-  id
-  title
-}}
-`;
+const ALL_THREADS = gql`{allThreads {id title}}`;
 
 export default function Home() { 
     const { data, loading } = useQuery(ALL_THREADS);
@@ -17,7 +12,7 @@ export default function Home() {
     else {
         return (
             <ViewStyled>
-                {data.allThreads?.map(thread => <Thread title={thread.title} key={thread.id }/>)}
+                {data.allThreads?.map(thread => <Thread title={thread.title} key={thread.id } id={thread.id }/>)}
             </ViewStyled>
         )
     }
