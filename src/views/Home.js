@@ -17,7 +17,7 @@ export default function Home() {
     else {
         return (
             <ViewStyled>
-                {(data.allThreads).map(thread => <Thread title={thread.title} key={thread.id }/>)}
+                {data.allThreads?.map(thread => <Thread title={thread.title} key={thread.id }/>)}
             </ViewStyled>
         )
     }
