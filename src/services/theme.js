@@ -41,3 +41,8 @@ export const textColor = theme('mode', {
     light: 'black',
     dark: 'white',
 });
+
+export const cardBoxColor = theme('mode', {
+    light: '#B39D73',
+    dark: '#49391C',
+});

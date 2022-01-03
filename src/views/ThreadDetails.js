@@ -2,8 +2,16 @@ import styled from 'styled-components/native';
 import ViewStyled from '../generic/ViewGen';
 import { gql, useQuery } from '@apollo/client'
 import AppLoading from 'expo-app-loading';
-import { Text } from 'react-native';
 import Post from '../components/PostCard';
+import { titleColor } from '../services/theme';
+import ButtonGen from '../generic/ButtonGen';
+
+const TitleStyled = styled.Text`
+  font-size: 20px;
+  font-weight: bold;
+  text-align: justify;
+  color:${titleColor};
+`;
 
 export default function ThreadDetails({ route }) { 
     const ID = route.params.id;
@@ -14,8 +22,9 @@ export default function ThreadDetails({ route }) {
     else {
         return (
             <ViewStyled>
-                <Text>{data.thread.title}</Text>
-                {data.postsThread?.map(post => <Post body={post.body} key={post.id } />)}
+                <TitleStyled>{data.thread.title}</TitleStyled>
+                {data.postsThread?.map(post => <Post body={post.body} key={post.id} />)}
+                <ButtonGen title="Nuevo"/>
             </ViewStyled>
         )
     }
